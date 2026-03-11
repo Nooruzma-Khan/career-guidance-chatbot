@@ -55,9 +55,9 @@ const HeroSection = () => {
           >
             <div className="bg-card/80 border border-primary/30 rounded-lg p-4 text-left font-mono-code text-xs sm:text-sm max-w-md mx-auto neon-border-green">
               <div className="flex items-center gap-2 mb-3 border-b border-border pb-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
+                <div className="w-2.5 h-2.5 rounded-full bg-destructive" />
+                <div className="w-2.5 h-2.5 rounded-full bg-accent" />
+                <div className="w-2.5 h-2.5 rounded-full bg-primary" />
                 <span className="text-muted-foreground text-xs ml-2">terminal</span>
               </div>
               {displayedLines.map((line, i) => (
