@@ -30,11 +30,12 @@ const AchievementsSection = () => {
         >
           <div className="bg-card/60 border rounded-xl overflow-hidden neon-border-purple group hover:scale-[1.02] transition-all duration-300">
             {/* Certificate display */}
-            <div className="h-48 bg-accent/5 flex items-center justify-center border-b border-border">
-              <div className="text-center">
-                <Trophy className="w-16 h-16 text-accent/40 mx-auto mb-2 group-hover:text-accent/70 transition-colors" />
-                <p className="text-muted-foreground text-xs font-mono-code">SIH Certificate</p>
-              </div>
+            <div className="border-b border-border overflow-hidden">
+              <img
+                src={sihCertificate}
+                alt="Smart India Hackathon Certificate - Nooruzma Khan"
+                className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
 
             <div className="p-6">
