@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Award, Trophy } from "lucide-react";
+import { Award } from "lucide-react";
+import sihCertificate from "@/assets/sih-certificate.jpg";
 
 const AchievementsSection = () => {
   const ref = useRef(null);
