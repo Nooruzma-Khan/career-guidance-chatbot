@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code, Brain, Shield, BookOpen, Lightbulb } from "lucide-react";
+import cyberAvatar from "@/assets/cyber-avatar.png";
 
 const points = [
   { icon: Code, text: "Passionate about programming and software development" },
@@ -39,11 +40,12 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex justify-center"
           >
-            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl border-2 border-primary/30 neon-border-green bg-card/50 flex items-center justify-center overflow-hidden">
-              <div className="text-center">
-                <Shield className="w-20 h-20 text-primary/40 mx-auto mb-3" />
-                <p className="text-muted-foreground text-sm font-mono-code">NK</p>
-              </div>
+            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl border-2 border-primary/30 neon-border-green bg-card/50 overflow-hidden">
+              <img
+                src={cyberAvatar}
+                alt="Cyber avatar - Nooruzma Khan"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
