@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code, Brain, Shield, BookOpen, Lightbulb } from "lucide-react";
-import cyberAvatar from "@/assets/cyber-avatar.png";
 
 const points = [
   { icon: Code, text: "Passionate about programming and software development" },
@@ -23,7 +22,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-2">
             <span className="text-primary neon-glow-green">{"<"}</span> About Me{" "}
@@ -32,54 +31,36 @@ const AboutSection = () => {
           <div className="w-20 h-0.5 bg-primary/50 mx-auto mt-4" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-          {/* Image placeholder */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center"
-          >
-            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl border-2 border-primary/30 neon-border-green bg-card/50 overflow-hidden">
-              <img
-                src={cyberAvatar}
-                alt="Cyber avatar - Nooruzma Khan"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-2xl mx-auto text-center"
+        >
+          <p className="text-foreground/80 leading-relaxed mb-10 text-base sm:text-lg">
+            I'm <span className="text-primary font-semibold">Nooruzma Khan</span>, a student developer
+            with a deep passion for technology. My interests span across programming, artificial intelligence,
+            and cybersecurity. I believe in the power of technology to solve real-world problems and I'm
+            constantly exploring new tools and techniques to expand my knowledge.
+          </p>
 
-          {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <p className="text-foreground/80 leading-relaxed mb-8">
-              I'm <span className="text-primary font-semibold">Nooruzma Khan</span>, a student developer
-              with a deep passion for technology. My interests span across programming, artificial intelligence,
-              and cybersecurity. I believe in the power of technology to solve real-world problems and I'm
-              constantly exploring new tools and techniques to expand my knowledge.
-            </p>
-
-            <div className="space-y-4">
-              {points.map((point, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
-                  className="flex items-center gap-3 group"
-                >
-                  <div className="w-8 h-8 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:neon-border-green transition-all">
-                    <point.icon className="w-4 h-4 text-primary" />
-                  </div>
-                  <span className="text-foreground/70 text-sm">{point.text}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
+            {points.map((point, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 15 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+                className="flex items-center gap-3 group text-left"
+              >
+                <div className="w-8 h-8 shrink-0 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:neon-border-green transition-all">
+                  <point.icon className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-foreground/70 text-sm">{point.text}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
