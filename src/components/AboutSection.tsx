@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Brain, Shield, BookOpen, Lightbulb } from "lucide-react";
+import { Code, Brain, BookOpen, Lightbulb } from "lucide-react";
+import cyberAvatar from "@/assets/cyber-avatar.png";
 
 const points = [
   { icon: Code, text: "Passionate about programming and software development" },
