@@ -41,10 +41,10 @@ Open [http://localhost:8080](http://localhost:8080) in your browser.
 
 ## 📚 What I Learned
 
-- Building and deploying a full React + TypeScript web application
-- Integrating an AI chatbot into a frontend interface
-- Using shadcn-ui component library with Tailwind CSS
+- Using AI-powered tools like Lovable to build and ship real web applications
 - Deploying a project live using Vercel
+- Integrating an AI chatbot into a portfolio web app
+- Working with React, TypeScript, and Tailwind CSS codebase
 
 ---
 
