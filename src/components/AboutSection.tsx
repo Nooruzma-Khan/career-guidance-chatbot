@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Brain, Shield, BookOpen, Lightbulb } from "lucide-react";
+import { Code, Brain, Rocket, BookOpen, Lightbulb } from "lucide-react";
 
 const points = [
   { icon: Code, text: "Passionate about programming and software development" },
   { icon: Brain, text: "Exploring artificial intelligence and machine learning" },
-  { icon: Shield, text: "Interested in cybersecurity and ethical hacking" },
+  { icon: Rocket, text: "Building real-world AI-powered applications" },
   { icon: BookOpen, text: "Committed to continuous learning and growth" },
   { icon: Lightbulb, text: "Building innovative technology solutions" },
 ];
@@ -39,9 +39,10 @@ const AboutSection = () => {
         >
           <p className="text-foreground/80 leading-relaxed mb-10 text-base sm:text-lg">
             I'm <span className="text-primary font-semibold">Nooruzma Khan</span>, a student developer
-            with a deep passion for technology. My interests span across programming, artificial intelligence,
-            and cybersecurity. I believe in the power of technology to solve real-world problems and I'm
-            constantly exploring new tools and techniques to expand my knowledge.
+            with a passion for artificial intelligence and software development. I love turning ideas
+            into working products using Python, Java, and AI tools, with a strong foundation in data
+            structures and object-oriented programming. I believe in learning by building and sharing
+            my work openly.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">

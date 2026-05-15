@@ -1,28 +1,28 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Folder, Sparkles } from "lucide-react";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  demo?: string;
+  comingSoon?: boolean;
+};
+
+const projects: Project[] = [
   {
-    title: "Cyber Threat Analyzer",
-    description: "A tool to analyze and detect potential cybersecurity threats using pattern recognition algorithms.",
-    tech: ["Python", "SQL", "Security"],
-    github: "#",
-    demo: "#",
+    title: "Career Guidance Chatbot",
+    description:
+      "An AI-powered career assistant built with React and TypeScript. Users can ask career-related questions and get intelligent guidance. Deployed live on Vercel.",
+    tech: ["React", "TypeScript", "AI"],
+    demo: "https://nooruzmakhan.vercel.app",
   },
   {
-    title: "AI Chatbot Assistant",
-    description: "An intelligent chatbot built with natural language processing to assist with student queries.",
-    tech: ["Java", "AI", "NLP"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Smart Attendance System",
-    description: "An automated attendance tracking system using facial recognition and database management.",
-    tech: ["Python", "C++", "SQL"],
-    github: "#",
-    demo: "#",
+    title: "More Coming Soon",
+    description: "Currently building new AI and Python projects. Check back soon!",
+    tech: ["AI", "Python"],
+    comingSoon: true,
   },
 ];
 
@@ -45,7 +45,7 @@ const ProjectsSection = () => {
           <div className="w-20 h-0.5 bg-primary/50 mx-auto mt-4" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
@@ -54,9 +54,12 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5, delay: 0.15 * i }}
               className="bg-card/60 border border-border rounded-xl overflow-hidden group hover:-translate-y-2 hover:neon-border-green transition-all duration-300"
             >
-              {/* Preview area */}
               <div className="h-40 bg-muted/30 flex items-center justify-center border-b border-border">
-                <Folder className="w-12 h-12 text-primary/30 group-hover:text-primary/60 transition-colors" />
+                {project.comingSoon ? (
+                  <Sparkles className="w-12 h-12 text-primary/30 group-hover:text-primary/60 transition-colors" />
+                ) : (
+                  <Folder className="w-12 h-12 text-primary/30 group-hover:text-primary/60 transition-colors" />
+                )}
               </div>
 
               <div className="p-5">
@@ -78,14 +81,18 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-3">
-                  <a href={project.github} className="text-muted-foreground hover:text-primary transition-colors">
-                    <Github className="w-4 h-4" />
-                  </a>
-                  <a href={project.demo} className="text-muted-foreground hover:text-secondary transition-colors">
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </div>
+                {project.demo && (
+                  <div className="flex gap-3">
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-secondary hover:text-primary transition-colors text-xs font-mono-code"
+                    >
+                      <ExternalLink className="w-4 h-4" /> Live Demo
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

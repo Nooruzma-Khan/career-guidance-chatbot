@@ -5,7 +5,7 @@ import { ChevronDown, ExternalLink, Mail } from "lucide-react";
 const terminalLines = [
   "> Initializing portfolio...",
   "> AI modules loading...",
-  "> Cybersecurity protocols active...",
+  "> Building AI solutions...",
   "> Access Granted.",
 ];
 
@@ -90,7 +90,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-lg sm:text-xl text-secondary font-mono-code mb-4 neon-glow-blue"
           >
-            Student Developer | Cybersecurity & AI Enthusiast
+            Student Developer | AI • Python • Java
           </motion.p>
 
           <motion.p
@@ -99,8 +99,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            A passionate student interested in programming, artificial intelligence, and
-            cybersecurity, eager to build innovative and intelligent technology solutions.
+            A passionate student interested in programming, artificial intelligence, and building
+            real-world applications using Python, Java, and modern web technologies.
           </motion.p>
 
           <motion.div
