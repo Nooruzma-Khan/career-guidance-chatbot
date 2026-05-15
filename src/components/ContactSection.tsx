@@ -86,7 +86,7 @@ const ContactSection = () => {
           >
             <p className="text-muted-foreground leading-relaxed">
               Feel free to reach out for collaborations, project ideas, or just a friendly conversation
-              about technology, AI, and cybersecurity.
+              about technology and AI.
             </p>
 
             <div className="space-y-4">
@@ -97,14 +97,14 @@ const ContactSection = () => {
                 <span className="text-sm font-mono-code">knooruzma@gmail.com</span>
               </a>
 
-              <a href="#" className="flex items-center gap-3 text-foreground/70 hover:text-foreground transition-colors group">
+              <a href="https://github.com/Nooruzma-Khan" className="flex items-center gap-3 text-foreground/70 hover:text-foreground transition-colors group">
                 <div className="w-10 h-10 rounded-lg bg-muted border border-border flex items-center justify-center group-hover:neon-border-green transition-all">
                   <Github className="w-5 h-5" />
                 </div>
                 <span className="text-sm font-mono-code">GitHub</span>
               </a>
 
-              <a href="#" className="flex items-center gap-3 text-foreground/70 hover:text-secondary transition-colors group">
+              <a href="https://www.linkedin.com/in/nooruzma-khan-42142633a" className="flex items-center gap-3 text-foreground/70 hover:text-secondary transition-colors group">
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 border border-secondary/20 flex items-center justify-center group-hover:neon-border-blue transition-all">
                   <Linkedin className="w-5 h-5 text-secondary" />
                 </div>
