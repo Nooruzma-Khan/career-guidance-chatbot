@@ -99,8 +99,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            A passionate student interested in programming, artificial intelligence, and building
-            real-world applications using Python, Java, and modern web technologies.
+            A passionate student interested in programming, artificial intelligence, and automation —
+            building smart solutions using Python and modern web technologies.
           </motion.p>
 
           <motion.div
